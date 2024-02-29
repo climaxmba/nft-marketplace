@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import "./globals.css";
 
 import { Providers } from "../GlobalRedux/provider";
-import NavBar from "../components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +21,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <NavBar />
           {children}
           <Footer />
         </Providers>
