@@ -1,6 +1,8 @@
 "use client";
 
-import Logo from "../Logo";
+import Image from "next/image";
+import logoPiece1 from "@/src/assets/img/logop1.svg"
+import logoPiece2 from "@/src/assets/img/logop2.svg"
 import CompanyLogosGroup from "@/src/assets/companyLogosGroup";
 
 function SearchBox() {
@@ -20,8 +22,8 @@ export default function Header() {
   return <header>
     <p>NON FUNGIBLE TOKENS</p>
     <h1>
-      <span>A new NFT <Logo /></span>
-      <span><Logo /> Experience</span>
+      <span>A new NFT <Image alt="" src={logoPiece1} /></span>
+      <span><Image alt="" src={logoPiece2} /> Experience</span>
     </h1>
     <p>Discover, collect and sell</p>
 

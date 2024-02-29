@@ -1,6 +1,11 @@
 "use client";
 
 import Header from "../components/home/Header";
+import LiveAuctions from "../components/home/LiveAuctions";
+import { USection } from "../components/home/Sections";
+import NFTListBand from "../components/home/NFTListBand";
+import MostPopularAuctions from "../components/home/MostPopularActions";
+import Stats from "../components/home/Stats";
 
 // import type { RootState } from "@reduxjs/toolkit/query";
 // import { useSelector, useDispatch } from "react-redux";
@@ -11,8 +16,13 @@ export default function Home() {
   // const dispatch = useDispatch();
 
   return (
-    <main>
+    <div>
       <Header />
-    </main>
+      <LiveAuctions />
+      <USection />
+      <MostPopularAuctions />
+      <Stats />
+      <NFTListBand />
+    </div>
   );
 }
