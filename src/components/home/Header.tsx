@@ -8,7 +8,7 @@ import NavBar from "../NavBar";
 
 function SearchBox() {
   return (
-    <div>
+    <div className="bg-white p-3 rounded">
       <input
         type="text"
         name=""
@@ -27,20 +27,22 @@ function SearchBox() {
 
 export default function Header() {
   return (
-    <header>
+    <header className="min-h-screen flex flex-col">
       <NavBar />
-      <p>NON FUNGIBLE TOKENS</p>
-      <h1>
-        <span>
-          A new NFT <Image alt="" src={logoPiece1} />
-        </span>
-        <span>
-          <Image alt="" src={logoPiece2} /> Experience
-        </span>
-      </h1>
-      <p>Discover, collect and sell</p>
+      <div className="flex flex-col items-center">
+        <p className="text-xs">NON FUNGIBLE TOKENS</p>
+        <h1 className="text-6xl ">
+          <span>
+            A new NFT <Image alt="" src={logoPiece1} width={28} />
+          </span>
+          <span>
+            <Image alt="" src={logoPiece2} width={28} /> Experience
+          </span>
+        </h1>
+        <p>Discover, collect and sell</p>
 
-      <SearchBox />
+        <SearchBox />
+      </div>
 
       <CompanyLogosGroup />
     </header>

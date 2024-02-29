@@ -5,11 +5,31 @@ import Image from "next/image";
 export function Button({
   text,
   type = "button",
+  outline = false,
 }: {
   text: string;
   type?: "button" | "submit" | "reset";
+  outline?: boolean;
 }) {
-  return <button type={type}>{text}</button>;
+  return (
+    <>
+      {outline ? (
+        <button type="button" className="rounded px-4 py-1 font-normal" style={{ opacity: "0.8", border: "1px solid" }}>
+          {text}
+        </button>
+      ) : (
+        <button
+          className={"rounded px-4 py-1.5 font-semibold"}
+          style={{
+            background: "linear-gradient(-45deg, blue, royalblue)",
+          }}
+          type={type}
+        >
+          {text}
+        </button>
+      )}
+    </>
+  );
 }
 
 function NFTItem({ isDetailed = false }) {
