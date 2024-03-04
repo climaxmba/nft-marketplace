@@ -1,5 +1,6 @@
 "use client";
 
+import "./Header.css"
 import Image from "next/image";
 import logoPiece1 from "@/src/assets/img/logop1.svg";
 import logoPiece2 from "@/src/assets/img/logop2.svg";
@@ -8,7 +9,7 @@ import NavBar from "../NavBar";
 
 function SearchBox() {
   return (
-    <div className="bg-white p-3 rounded">
+    <div className="bg-white p-3 rounded mt-6 text-black">
       <input
         type="text"
         name=""
@@ -27,19 +28,20 @@ function SearchBox() {
 
 export default function Header() {
   return (
-    <header className="min-h-screen flex flex-col">
+    <header className="min-h-screen flex flex-col justify-between header">
       <NavBar />
+
       <div className="flex flex-col items-center">
-        <p className="text-xs">NON FUNGIBLE TOKENS</p>
-        <h1 className="text-6xl ">
-          <span>
-            A new NFT <Image alt="" src={logoPiece1} width={28} />
+        <p className="text-xs text-gray-400 tracking-wider">NON FUNGIBLE TOKENS</p>
+        <h1 className="text-6xl font-black flex flex-col my-6">
+          <span className="mr-6 flex gap-2 items-center">
+            A new NFT <Image alt="" src={logoPiece1} width={20} style={{display: "inline"}} />
           </span>
-          <span>
-            <Image alt="" src={logoPiece2} width={28} /> Experience
+          <span className="ml-6">
+            <Image alt="" src={logoPiece2} width={28} style={{display: "inline"}} /> Experience
           </span>
         </h1>
-        <p>Discover, collect and sell</p>
+        <p className="text-gray-400">Discover, collect and sell</p>
 
         <SearchBox />
       </div>

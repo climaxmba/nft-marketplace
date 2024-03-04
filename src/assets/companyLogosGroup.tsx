@@ -9,11 +9,11 @@ import newHolland from "./img/newholland.svg";
 
 export default function CompanyLogosGroup() {
   return (
-    <div>
-      <Image alt="" src={ritterSport} />
-      <Image alt="" src={nike} />
-      <Image alt="" src={adidas} />
-      <Image alt="" src={newHolland} />
+    <div className="flex gap-20 justify-center pb-6">
+      <Image alt="" src={ritterSport} height={30} />
+      <Image alt="" src={nike} height={30} />
+      <Image alt="" src={adidas} height={30} />
+      <Image alt="" src={newHolland} height={30} />
     </div>
   );
 }
