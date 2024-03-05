@@ -1,6 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import time from "@/src/assets/img/time.svg"
+// import liked from "@/src/assets/img/liked.svg";
+import like from "@/src/assets/img/like.svg";
 
 export function Button({
   text,
@@ -34,23 +37,23 @@ export function Button({
 
 function NFTItem({ isDetailed = false }) {
   return (
-    <div>
-      <div>Image</div>
+    <div className="flex flex-col gap-2 border-gray-500 border p-3.5 rounded-lg">
+      <div className={`${isDetailed ? "h-72 w-48" : "h-64 w-40" } bg-white rounded-lg`}>{"Image"}</div>
 
-      <div>
+      <div className="flex justify-between gap-2">
         <h4>NFT Name</h4>
-        <span>Price</span>
+        <span className="font-bold text-xs py-1 px-2 rounded-md bg-indigo-900 text-indigo-400 tracking-wider">{"Price"}</span>
       </div>
 
-      <div>
-        <span>ico</span>
+      <div className="flex gap-2">
+        <Image alt="" src={time} width={15} />
         <span>time left</span>
       </div>
 
-      <div>
-        <div>{isDetailed && <span>imgs</span>}bidding</div>
-        <div>
-          <span>ico</span>
+      <div className="flex justify-between gap-2 pt-1 border-t border-gray-500">
+        <div className="flex gap-1">{isDetailed && <span>Imgs</span>}bidding</div>
+        <div className="flex gap-2">
+          <Image alt="" src={like} width={15} />
           {isDetailed && "Likes"}
         </div>
       </div>
@@ -60,7 +63,7 @@ function NFTItem({ isDetailed = false }) {
 
 export function NFTListHr({ isDetailed = false }) {
   return (
-    <div>
+    <div className="flex gap-6 w-full justify-center pt-6 overflow-x-scroll">
       <NFTItem isDetailed={isDetailed} />
       <NFTItem isDetailed={isDetailed} />
       <NFTItem isDetailed={isDetailed} />
